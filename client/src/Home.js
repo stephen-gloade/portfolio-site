@@ -7,6 +7,7 @@ import StickyScroll from "./StickyScroll";
 import { IoMdArrowDroprightCircle } from 'react-icons/io'
 import { IconContext } from "react-icons/lib";
 import { Link } from "react-scroll"
+import RightSideBar from "./RightSideBar";
 const Home = () => {
 
     const [showPasteString, setShowPasteString] = useState(false);
@@ -15,7 +16,7 @@ const Home = () => {
 
     const stephen = {
 
-        status: "Full-Stack Software Developer",
+        status: 418,
         languages: ["JavaScript"],
         frameworks: ["Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "React", "React", "React", "React", "React", "React", "React Native"],
 
@@ -43,13 +44,6 @@ const Home = () => {
                 <SideBar/>
             </SideBarWrapper>
             <MainWrap>
-                {/* <H1Typewriter
-                    options={{
-                    strings: ['Hello', 'World'],
-                    autoStart: true,
-                    loop: true,
-                    }}
-                /> */}
                 <Typewriter 
                 onInit={(typewriter) => {
                     typewriter.typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';">console.log("Hello World! 👋");</h1>`)
@@ -65,21 +59,6 @@ const Home = () => {
                         setShowButton(true);
                     })
                     .start()
-            //         .callFunction(() => {
-            //             if (showPasteString) {
-            //                 typewriter
-            //         .pasteString(`<div style="background-color: #0A4D68; border-radius: 25px; margin: 10px; padding: 5px;"><h1 style="font-family: 'Fira Code Light';">
-            //         <span style="color: #576CBC;">{</span>
-
-            //             <br/><span style="margin-left:30px; color: #05BFDB;">status:</span> <span style="color: #A4BE7B;">"Full-Stack Software Developer"</span>,
-            //             <br><span style="margin-left:30px; color: #05BFDB;">language:</span> [<span style="color: #A4BE7B;">"JavaScript"</span>],
-            //             <br><span style="margin-left:30px; color: #05BFDB;">frameworks:</span> [<span style="color: #A4BE7B;">"Node.js", "React", "React Native"</span>],
-                
-            //         <br><span style="color: #576CBC;">}</span></h1></div>`)
-            //         .start()
-            //     }
-                    
-            // })
                     }}
                 options={{
                     cursor: '|',
@@ -106,7 +85,7 @@ const Home = () => {
                         <IconContext.Provider value={{ size: '30px', marginLeft: '30px'}}>
                         <IoMdArrowDroprightCircle/>
                         </IconContext.Provider>
-                        </Link><span style={{color: '#05BFDB'}}>status:</span> <span style={{color: '#A4BE7B'}}>"Full-Stack Software Developer"</span>,
+                        </Link><span style={{color: '#05BFDB'}}>status:</span> <span style={{color: '#A4BE7B'}}>418</span>,
                         <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>language:</span> [<span style={{color: '#A4BE7B'}}>"JavaScript"</span>],
                         <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>frameworks:</span> [<span style={{color: '#A4BE7B'}}>"Node.js", "React", "React Native"</span>],
                         <br/><span style={{color: '#576CBC'}}>&#125;</span>
@@ -114,9 +93,16 @@ const Home = () => {
                 )}
                 <StickyScroll/>
             </MainWrap>
+            <RightSideWrap>
+                    <RightSideBar/>
+            </RightSideWrap>
         </PageWrap>
     )
 }
+
+const RightSideWrap = styled.div`
+
+`
 
 const Button = styled.button`
 border: none;
