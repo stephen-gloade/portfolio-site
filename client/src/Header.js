@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-scroll";
 
 const Header = () => {
     return (
@@ -13,7 +14,7 @@ const Header = () => {
                         Experience
                     </NavItem>
                     <NavItem>
-                        Contact
+                    <Link to="section3" smooth={true} duration={500} offset={-50}>Contact</Link>
                     </NavItem>
                 </Navul>
             </NavWrap>

@@ -70,6 +70,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
+position: sticky;
 `
 
 const SideWrap = styled.div`
@@ -78,6 +79,9 @@ width: 100px;
 display: flex;
 flex-direction: column;
 margin: 10px 30px;
+position: fixed;
+  /* top: 0;
+  left: 0; */
 
 
 

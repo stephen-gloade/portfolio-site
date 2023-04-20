@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle `
     body {
         background-color: ${primaryColor};
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     p,
