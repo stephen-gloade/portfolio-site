@@ -11,6 +11,7 @@ import Section2Animation from "./Section2Animation";
 import Section2Content from "./Section2Content";
 import { GrLocation } from "react-icons/gr";
 import { IconContext } from "react-icons/lib";
+import { FaGithubAlt, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 
 const StickyScroll = () => {
@@ -65,26 +66,33 @@ const StickyScroll = () => {
       background: "#e67e22",
       content: (
         <SectionDiv3 className="section3">
-
+          <SkillsWrap>
+            <div>
+            <H1>Lets</H1>
+            <H1Bot>get in touch.</H1Bot>
+            </div>
+          </SkillsWrap>
+          <CardWrap>
           <Card class="card">
           <p>
             Stephen Gloade
           </p>
           <h2>
-            Skills.
+            Contact Me.
           </h2>
+          <GridDiv>
+          <IconContext.Provider value={{ size: '100px'}}>
+            <GridItem><a  target="_blank" href="https://github.com/stephen-gloade"><FaGithubAlt/></a></GridItem>
+            <GridItem></GridItem>
+            <GridItem><a target="_blank" href="https://www.linkedin.com/in/stephen-gloade-8751bbb5/"><FaLinkedin/></a></GridItem>
+            <GridItem></GridItem>
+            <GridItem><a target="_blank" href="https://www.instagram.com/stephen.gloade/"><FaInstagram/></a></GridItem>
+            <GridItem></GridItem>
+          </IconContext.Provider>
+          </GridDiv>
           </Card>
-          <SkillsWrap>
-            <Skills>
-              <H1>React</H1>
-            </Skills>
-            <Skills>
-              <H1>React</H1>
-            </Skills>
-            <Skills>
-              <H1>React</H1>
-            </Skills>
-          </SkillsWrap>
+          </CardWrap>
+
         </SectionDiv3>
       ),
     },
@@ -110,8 +118,57 @@ const StickyScroll = () => {
   );
 };
 
-const H1 = styled.h1 `
 
+const GridItem = styled.div`
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); // Optional, to visualize grid items */
+  background-color: rgba(255, 255, 255, 0.8); // Optional, to visualize grid items
+  display: flex; // Add this line
+  align-items: center; // Add this line
+  justify-content: center; // Add this line
+  box-sizing: border-box;
+  :nth-child(odd) {
+
+    /* border: 2px solid #E5D9B6;  */
+    border: 2px solid ${textColor}
+  }
+
+  :nth-child(even) {
+    /* border: 2px solid ${textColor}; */
+    background-color: ${textColor};
+  }
+
+`
+
+const GridDiv = styled.div `
+display: grid;
+/* gap: 5px; */
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+width: 100%;
+height: 80%;
+
+
+`
+
+const CardWrap = styled.div `
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+height: 100%;
+padding: 30px;
+`
+
+const H1 = styled.h1 `
+font-size: 40px;
+`
+
+const H1Bot = styled.h1 `
+font-size: 40px;
+border-bottom: 1px solid ${textColor};
+width: fit-content;
 `
 
 const Skills = styled.div `
@@ -124,8 +181,10 @@ height: 100%;
 
 const SkillsWrap = styled.div `
 display: flex;
-justify-content: space-evenly;
-width: 100%;
+flex-direction: column;
+justify-content: center;
+width: 50%;
+align-items: center;
 `
 
 
@@ -178,24 +237,22 @@ width: 48%;
 `
 
 const Card = styled.div`
-margin-top: 100px;
 background-color: #fff;
 display: block;
-width: 100px;
-height: 300px;
+width: 80%;
+height: 50%;
 min-height: 90px;
-border: 3px solid #555BFF;
+border: 3px solid #E5D9B6;
 padding: 15px;
 /* margin: calc(50vh - 30px) auto 0 auto; */
-box-shadow: 10px -10px 0 -3px #fff, 10px -10px #1FC11B,
-      20px -20px 0 -3px #fff, 20px -20px #FFD913, 
-      30px -30px 0 -3px #fff, 30px -30px #FF9C55, 
-      40px -40px 0 -3px #fff, 40px -40px #FF5555; 
+box-shadow: 10px -10px 0 -3px #fff, 10px -10px #A4BE7B,
+      20px -20px 0 -3px #fff, 20px -20px #5F8D4E, 
+      30px -30px 0 -3px #fff, 30px -30px ${textColor}, 
+      40px -40px 0 -3px #fff, 40px -40px #263A29; 
 transition: box-shadow 1s, top 1s, left 1s;
 position: relative;
 top: 0;
 left: 0;
-cursor: pointer;
 
 :hover {
   top: -40px;
@@ -207,10 +264,6 @@ cursor: pointer;
 }
 `
 
-const Section2Img = styled.img`
-height: 200px;
-width: 200px;
-`
 
 const SectionDiv1 = styled.div`
 background-color: ${primaryColor};
@@ -237,8 +290,6 @@ border-top: 1px solid ${textColor};
 
 const SectionDiv3 = styled.div`
 display: flex;
-flex-direction: column;
-align-items: center;
 background-color: ${primaryColor};
 height: 100%;
 width: 100%;

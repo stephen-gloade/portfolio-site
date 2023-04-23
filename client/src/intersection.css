@@ -40,3 +40,11 @@
     filter: blur(0);
     transform: translateX(0);
 }
+
+.react-icon {
+    transition: color 0.3s;
+  }
+  
+  .react-icon:hover {
+    color: black;
+  }
