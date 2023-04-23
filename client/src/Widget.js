@@ -20,17 +20,37 @@ const Widget = () => {
                     <DescriptionWrap>
                         <H1>Dubs Advising</H1>
                         <Ul>
-                            <Li>Developed a website for a sports advising company I co-founded</Li>
+                            <Li>Developed a website for a sports advising company I co-founded using React, Node.js and MongoDB</Li>
                             <Li>Implemented many technologies such as Twilio, Stripe, Paypal, Sendgrid, and Auth0 to create a seamless customer experience</Li>
                             <Li>Became a project lead upon hiring two software developers to assist with future iterations</Li>
                         </Ul>
-                        <P>The project is still in the works! <a href="">Github project repo</a></P>
+                        <P>The project is still in the works!</P>
+                        <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a>
                     </DescriptionWrap>
                 </ItemContentWrap>);
         case "bootcamp":
-          return <p>Bootcamp content</p>;
+          return (<ItemContentWrap>
+            <DescriptionWrap>
+                <H1>Concordia Bootcamp</H1>
+                <Ul>
+                    <Li>Graduated from the Concordia University Full-Stack Web Developer Bootcamp</Li>
+                    <Li>Learned how to develop web apps using JavaScript, React, Node.js, and MongoDB</Li>
+                    <Li>Learned how to self teach concepts and learn new technologies at a rapid pace</Li>
+                </Ul>
+                {/* <P>The project is still in the works!</P>
+                <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a> */}
+            </DescriptionWrap>
+        </ItemContentWrap>);
         case "wip":
-          return <p>W.I.P content</p>;
+          return (<ItemContentWrap>
+            <DescriptionWrap>
+                <H1>Open Source Software</H1>
+                <Ul>
+                    <Li>While making my projects I learned the importance of open source software and am beyond excited to start contributing</Li>
+                    <Li>As I start my journey into OSS contributions I will be updating this portfolio</Li>
+                </Ul>
+            </DescriptionWrap>
+        </ItemContentWrap>);
         default:
           return <p>No content available</p>;
       }
@@ -38,7 +58,6 @@ const Widget = () => {
 
     return (
         <WidgetWrap>
-            <H1>Experience</H1>
             <HeaderWrap>
                 <StyledUl>
                     <Button onClick={() => handleClick("dubs")}>
@@ -57,9 +76,9 @@ const Widget = () => {
                     </Button>
                     <Button onClick={() => handleClick("wip")}>
                         {activeTab === "wip" ? (
-                        <ActiveHeaderItem>W.I.P</ActiveHeaderItem>
+                        <ActiveHeaderItem>OSS</ActiveHeaderItem>
                         ) : (
-                        <HeaderItem>W.I.P</HeaderItem>
+                        <HeaderItem>OSS</HeaderItem>
                         )}
                     </Button>
                 </StyledUl>
@@ -69,16 +88,22 @@ const Widget = () => {
     )
 }
 
+const Span = styled.span `
+
+`
+
 const Ul = styled.ul`
 margin: 20px;
 `
 
 const Li = styled.li`
-
+text-align: left;
+margin: 10px;
 `
 
 const H1 = styled.h1`
 font-family: 'Fira Code Light';
+margin: 10px;
 `
 const P = styled.p `
 

@@ -9,6 +9,9 @@ import { useInView } from 'react-intersection-observer';
 import './intersection.css'
 import Section2Animation from "./Section2Animation";
 import Section2Content from "./Section2Content";
+import { GrLocation } from "react-icons/gr";
+import { IconContext } from "react-icons/lib";
+
 
 const StickyScroll = () => {
 
@@ -23,18 +26,19 @@ const StickyScroll = () => {
             <Img src={require('./avatar2.jpg')}/>
             <AboutInfo>
               <H2>About</H2>
-              <P>My name is Stephen Gloade. I am a Full-Stack web developer currently looking for work.
-                I have a passion for design and love making clean looking projects with a focus on usability
+              <P>My name is Stephen Gloade, a First Nations Canadian who loves working with teams, and pursuing ambitious dreams. 
+                I am a Full-Stack web developer currently looking for work.
+                I have a passion for design and enjoy making clean looking projects with a focus on usability.
+                As a recent Concordia bootcamp graduate I found an immense passion for learning new technologies and diving
+                into these opportunities with open arms.
               </P>
+              <InfoWrap>
+                <IconContext.Provider value={{ size: '30px'}}>
+                <P><GrLocation/>Montreal, Canada</P>
+
+                </IconContext.Provider>
+              </InfoWrap>
             </AboutInfo>
-          {/* <Card class="card">
-          <p>
-            Stephen Gloade
-          </p>
-          <h2>
-            Emphasis on design.
-          </h2>
-          </Card> */}
           </ContentWrap>
         </SectionDiv1>
       ),
@@ -61,8 +65,26 @@ const StickyScroll = () => {
       background: "#e67e22",
       content: (
         <SectionDiv3 className="section3">
-          <h2>Section 3</h2>
-          <p>Section 3 content goes here.</p>
+
+          <Card class="card">
+          <p>
+            Stephen Gloade
+          </p>
+          <h2>
+            Skills.
+          </h2>
+          </Card>
+          <SkillsWrap>
+            <Skills>
+              <H1>React</H1>
+            </Skills>
+            <Skills>
+              <H1>React</H1>
+            </Skills>
+            <Skills>
+              <H1>React</H1>
+            </Skills>
+          </SkillsWrap>
         </SectionDiv3>
       ),
     },
@@ -87,6 +109,29 @@ const StickyScroll = () => {
     </Container>
   );
 };
+
+const H1 = styled.h1 `
+
+`
+
+const Skills = styled.div `
+display: flex;
+flex-direction: column;
+width: 30%;
+border: 1px solid red;
+height: 100%;
+`
+
+const SkillsWrap = styled.div `
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+`
+
+
+const InfoWrap = styled.div `
+
+`
 
 const H2 = styled.h2`
 border-bottom: 1px solid ${textColor};
@@ -133,9 +178,10 @@ width: 48%;
 `
 
 const Card = styled.div`
+margin-top: 100px;
 background-color: #fff;
 display: block;
-width: 300px;
+width: 600px;
 min-height: 90px;
 border: 3px solid #555BFF;
 padding: 15px;
@@ -190,7 +236,7 @@ border-top: 1px solid ${textColor};
 
 const SectionDiv3 = styled.div`
 display: flex;
-justify-content: center;
+flex-direction: column;
 align-items: center;
 background-color: ${primaryColor};
 height: 100%;
