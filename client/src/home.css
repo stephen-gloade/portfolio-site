@@ -13,3 +13,10 @@
     opacity: 0;
     animation: flash 1s linear infinite;
 }
+
+.TypewriterCursorSmall {
+    font-size: 5px;
+    opacity: 0;
+    animation: flash 1s linear infinite;
+}
+

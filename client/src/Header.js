@@ -32,6 +32,11 @@ const Img = styled.img`
 width: 100px;
 height: 100px;
 margin:30px;
+transition: transform 1s ease-in-out;
+
+:hover {
+transform: rotate(150deg);
+}
 `
 
 const NavItem = styled.li`

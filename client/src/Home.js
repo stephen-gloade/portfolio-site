@@ -8,35 +8,26 @@ import { IoMdArrowDroprightCircle } from 'react-icons/io'
 import { IconContext } from "react-icons/lib";
 import { Link } from "react-scroll"
 import RightSideBar from "./RightSideBar";
+import { textColor } from "./GlobalStyles";
+
 const Home = () => {
 
     const [showPasteString, setShowPasteString] = useState(false);
     const [ showButton, setShowButton ] =useState(false)
 
 
-    const stephen = {
-
-        status: 418,
-        languages: ["JavaScript"],
-        frameworks: ["Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "Node.js", "React", "React", "React", "React", "React", "React", "React Native"],
-
-    }
-
-    console.log(stephen)
-
-
     const handleClick = () => {
         setShowPasteString(prevState => !prevState);
-      };
+    };
 
 
-      const baseIconStyle = {
+    const baseIconStyle = {
         transition: 'transform 0.3s ease',
-      };
-      
-      const activeIconStyle = {
+    };
+
+    const activeIconStyle = {
         transform: 'rotate(90deg)',
-      };
+    };
 
     return (
         <PageWrap>
@@ -44,17 +35,16 @@ const Home = () => {
                 <SideBar/>
             </SideBarWrapper>
             <MainWrap>
+                <TypeWrap>
                 <Typewriter 
                 onInit={(typewriter) => {
                     typewriter.typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';">console.log("Hello World! 👋");</h1>`)
                     .pauseFor(500)
-                    .deleteChars(18)
-                    .typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';"><span style="font-family: 'Fira Code Bold';">Stephen Gloade</span>");</h1>`)
+                    .deleteChars(19)
+                    .typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';"><span style="font-family: 'Fira Code Bold';">stephen</span>);</h1>`)
                     .pauseFor(200)
                     .typeString('<h1 style="opacity: 0;">|</h1>')
                     .pauseFor(200)
-                    // .typeString('<h1 style="opacity: 0;">|</h1>')
-                    // .pauseFor(200)
                     .callFunction(() => {
                         setShowButton(true);
                     })
@@ -80,27 +70,45 @@ const Home = () => {
                 {showPasteString && (
                     <div style={{borderRadius: '25px', margin: '10px', padding: '5px',}}><h1 style={{fontFamily: 'Fira Code Light'}}>
                         <span style={{color: '#576CBC'}}>&#123;</span>
-        
-                        <br/><Link to="section3" smooth={true} duration={500} offset={-50}>
+                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>firstName:</span> <span style={{color: '#A4BE7B'}}>"Stephen"</span>,
+                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>lastName:</span> <span style={{color: '#A4BE7B'}}>"Gloade"</span>,
+                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>status:</span> <span style={{color: '#A4BE7B'}}>418</span>,
+                        <br/><StyledLink to="section1" smooth={true} duration={500}>
                         <IconContext.Provider value={{ size: '30px', marginLeft: '30px'}}>
                         <IoMdArrowDroprightCircle/>
                         </IconContext.Provider>
-                        </Link><span style={{color: '#05BFDB'}}>status:</span> <span style={{color: '#A4BE7B'}}>418</span>,
-                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>language:</span> [<span style={{color: '#A4BE7B'}}>"JavaScript"</span>],
-                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>frameworks:</span> [<span style={{color: '#A4BE7B'}}>"Node.js", "React", "React Native"</span>],
+                        </StyledLink><span style={{color: '#05BFDB'}}>about:</span> [<span style={{color: '#A4BE7B'}}>"Full-Stack Web Developer"</span>],
+                        <br/><Link to="section2" smooth={true} duration={500}>
+                        <IconContext.Provider value={{ size: '30px', marginLeft: '30px'}}>
+                        <IoMdArrowDroprightCircle/>
+                        </IconContext.Provider>
+                        </Link><span style={{color: '#05BFDB'}}>technologies:</span> [<span style={{color: '#A4BE7B'}}>"Node.js", "React", "React Native"</span>],
                         <br/><span style={{color: '#576CBC'}}>&#125;</span>
                     </h1></div>
                 )}
+                </TypeWrap>
                 <StickyScroll/>
             </MainWrap>
             <RightSideWrap>
-                    <RightSideBar/>
+                <RightSideBar/>
             </RightSideWrap>
         </PageWrap>
     )
 }
 
+const StyledLink = styled(Link)`
+cursor: pointer;
+`
+
+const TypeWrap = styled.div`
+height: calc(100vh - 150px);
+border-bottom: 1px solid ${textColor};
+`
+
 const RightSideWrap = styled.div`
+width: 100px;
+display: flex;
+margin: 10px 30px;
 
 `
 

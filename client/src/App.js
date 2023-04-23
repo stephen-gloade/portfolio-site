@@ -1,6 +1,5 @@
 import GlobalStyles from "./GlobalStyles";
 import Header from "./Header";
-import SideBar from "./SideBar";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
@@ -11,7 +10,6 @@ function App() {
       <>
       <GlobalStyles/>
       <Header/>
-      
       <Router>
         <Routes>
           <Route path="/" element={<Home/>} />

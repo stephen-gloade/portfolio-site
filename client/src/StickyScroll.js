@@ -3,23 +3,39 @@ import React from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 import styled from "styled-components";
-import { textColor } from "./GlobalStyles";
+import { textColor, primaryColor } from "./GlobalStyles";
+import gridImage from './grid.jpeg';
+import { useInView } from 'react-intersection-observer';
+import './intersection.css'
+import Section2Animation from "./Section2Animation";
+import Section2Content from "./Section2Content";
 
 const StickyScroll = () => {
+
+
   const sections = [
     {
       id: 1,
       background: "#3498db",
       content: (
-        <SectionDiv1>
-          <Card class="card">
+        <SectionDiv1 className="section1">
+          <ContentWrap>
+            <Img src={require('./avatar2.jpg')}/>
+            <AboutInfo>
+              <H2>About</H2>
+              <P>My name is Stephen Gloade. I am a Full-Stack web developer currently looking for work.
+                I have a passion for design and love making clean looking projects with a focus on usability
+              </P>
+            </AboutInfo>
+          {/* <Card class="card">
           <p>
             Stephen Gloade
           </p>
           <h2>
-            Suck my weiny
+            Emphasis on design.
           </h2>
-          </Card>
+          </Card> */}
+          </ContentWrap>
         </SectionDiv1>
       ),
     },
@@ -27,9 +43,16 @@ const StickyScroll = () => {
       id: 2,
       background: "#f1c40f",
       content: (
-        <SectionDiv2>
-          <h2>Section 2</h2>
-          <p>Section 2 content goes here.</p>
+        <SectionDiv2 className="section2">
+          <ContentWrap2>
+            <AnimationWrap>
+              <Section2Animation/>
+            </AnimationWrap>
+            <Section2ContentWrap>
+              <Section2Content/>
+            </Section2ContentWrap>
+          {/* <Section2Img src={require('./laptopGraphic.png')}/> */}
+          </ContentWrap2>
         </SectionDiv2>
       ),
     },
@@ -37,10 +60,10 @@ const StickyScroll = () => {
       id: 3,
       background: "#e67e22",
       content: (
-        <div id="section3">
+        <SectionDiv3 className="section3">
           <h2>Section 3</h2>
           <p>Section 3 content goes here.</p>
-        </div>
+        </SectionDiv3>
       ),
     },
     // Add more sections if needed
@@ -64,6 +87,50 @@ const StickyScroll = () => {
     </Container>
   );
 };
+
+const H2 = styled.h2`
+border-bottom: 1px solid ${textColor};
+
+`
+const P = styled.p`
+
+`
+
+const AboutInfo = styled.div`
+display: flex;
+flex-direction: column;
+`
+
+const Img = styled.img`
+border-radius: 50%;
+width: 300px;
+height: 300px;
+`
+
+const ContentWrap = styled.div`
+display: flex;
+width: 80%;
+
+`
+
+const ContentWrap2 = styled.div`
+/* background-image: url(${gridImage}); */
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+height: 60%;
+`
+
+const AnimationWrap = styled.div`
+height: 100%;
+width: 48%;
+
+`
+
+const Section2ContentWrap = styled.div `
+height: 100%;
+width: 48%;
+`
 
 const Card = styled.div`
 background-color: #fff;
@@ -93,17 +160,42 @@ cursor: pointer;
 }
 `
 
+const Section2Img = styled.img`
+height: 200px;
+width: 200px;
+`
+
 const SectionDiv1 = styled.div`
-background-color: blue;
-height: 400px;
-width: 600px;
+background-color: ${primaryColor};
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+border-bottom: 1px solid ${textColor};
 
 `
 
 const SectionDiv2 = styled.div`
-background-color: red;
-height: 400px;
-width: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: ${primaryColor};
+height: 100%;
+width: 100%;
+border-top: 1px solid ${textColor};
+
+
+`
+
+const SectionDiv3 = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: ${primaryColor};
+height: 100%;
+width: 100%;
+border-top: 1px solid ${textColor};
 
 `
 
