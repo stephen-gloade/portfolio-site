@@ -123,14 +123,13 @@ const GridItem = styled.div`
   width: 100%;
   height: 100%;
   /* border: 1px solid rgba(0, 0, 0, 0.1); // Optional, to visualize grid items */
-  background-color: rgba(255, 255, 255, 0.8); // Optional, to visualize grid items
-  display: flex; // Add this line
-  align-items: center; // Add this line
-  justify-content: center; // Add this line
+  background-color: ${primaryColor};
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   box-sizing: border-box;
-  :nth-child(odd) {
 
-    /* border: 2px solid #E5D9B6;  */
+  :nth-child(odd) {
     border: 2px solid ${textColor}
   }
 
@@ -214,6 +213,9 @@ height: 300px;
 const ContentWrap = styled.div`
 display: flex;
 width: 80%;
+@media (max-width: 768px) {
+    flex-direction: column;
+  }
 
 `
 
@@ -228,16 +230,22 @@ height: 60%;
 const AnimationWrap = styled.div`
 height: 100%;
 width: 48%;
+@media (max-width: 768px) {
+    display: none;
+  }
 
 `
 
 const Section2ContentWrap = styled.div `
 height: 100%;
 width: 48%;
+@media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const Card = styled.div`
-background-color: #fff;
+background-color: ${primaryColor};
 display: block;
 width: 80%;
 height: 50%;
@@ -245,10 +253,10 @@ min-height: 90px;
 border: 3px solid #E5D9B6;
 padding: 15px;
 /* margin: calc(50vh - 30px) auto 0 auto; */
-box-shadow: 10px -10px 0 -3px #fff, 10px -10px #A4BE7B,
-      20px -20px 0 -3px #fff, 20px -20px #5F8D4E, 
-      30px -30px 0 -3px #fff, 30px -30px ${textColor}, 
-      40px -40px 0 -3px #fff, 40px -40px #263A29; 
+box-shadow: 10px -10px 0 -3px ${primaryColor}, 10px -10px #A4BE7B,
+      20px -20px 0 -3px ${primaryColor}, 20px -20px #5F8D4E, 
+      30px -30px 0 -3px ${primaryColor}, 30px -30px ${textColor}, 
+      40px -40px 0 -3px ${primaryColor}, 40px -40px #263A29; 
 transition: box-shadow 1s, top 1s, left 1s;
 position: relative;
 top: 0;
@@ -273,6 +281,7 @@ align-items: center;
 height: 100%;
 width: 100%;
 border-bottom: 1px solid ${textColor};
+
 
 `
 

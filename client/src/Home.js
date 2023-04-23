@@ -110,6 +110,10 @@ width: 100px;
 display: flex;
 margin: 10px 30px;
 
+@media (max-width: 768px) {
+    display: none;
+  }
+
 `
 
 const Button = styled.button`
