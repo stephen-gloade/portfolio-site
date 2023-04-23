@@ -11,13 +11,13 @@ const SideBar = () => {
                 <BorderLeft/>
                 <IconContext.Provider value={{ size: '30px'}}>
                     <NavItem>
-                        <FaGithubAlt/>
+                        <a  target="_blank" href="https://github.com/stephen-gloade"><FaGithubAlt/></a>
                     </NavItem>
                     <NavItem>
-                        <FaInstagram/>
+                        <a target="_blank" href="https://www.instagram.com/stephen.gloade/"><FaInstagram/></a>
                     </NavItem>
                     <NavItem>
-                        <FaLinkedin/>
+                        <a target="_blank" href="https://www.linkedin.com/in/stephen-gloade-8751bbb5/"><FaLinkedin/></a>
                     </NavItem>
                 </IconContext.Provider>
                 <BorderRight/>

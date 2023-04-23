@@ -181,7 +181,8 @@ const Card = styled.div`
 margin-top: 100px;
 background-color: #fff;
 display: block;
-width: 600px;
+width: 100px;
+height: 300px;
 min-height: 90px;
 border: 3px solid #555BFF;
 padding: 15px;
