@@ -81,7 +81,7 @@ const StickyScroll = () => {
             Contact Me.
           </h2>
           <GridDiv>
-          <IconContext.Provider value={{ size: '100px'}}>
+          <IconContext.Provider value={{ className: 'responsive-icon', }}>
             <GridItem><a  target="_blank" href="https://github.com/stephen-gloade"><FaGithubAlt/></a></GridItem>
             <GridItem></GridItem>
             <GridItem><a target="_blank" href="https://www.linkedin.com/in/stephen-gloade-8751bbb5/"><FaLinkedin/></a></GridItem>
@@ -92,7 +92,6 @@ const StickyScroll = () => {
           </GridDiv>
           </Card>
           </CardWrap>
-
         </SectionDiv3>
       ),
     },
@@ -252,7 +251,7 @@ height: 50%;
 min-height: 90px;
 border: 3px solid #E5D9B6;
 padding: 15px;
-/* margin: calc(50vh - 30px) auto 0 auto; */
+
 box-shadow: 10px -10px 0 -3px ${primaryColor}, 10px -10px #A4BE7B,
       20px -20px 0 -3px ${primaryColor}, 20px -20px #5F8D4E, 
       30px -30px 0 -3px ${primaryColor}, 30px -30px ${textColor}, 
@@ -270,6 +269,10 @@ left: 0;
       0 0 0 -3px #fff, 0 0 0 0 #FF9C55,
       0 0 0 -3px  #fff, 0 0 0 0 #FF5555;
 }
+
+@media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 
@@ -303,6 +306,10 @@ background-color: ${primaryColor};
 height: 100%;
 width: 100%;
 border-top: 1px solid ${textColor};
+
+@media (max-width: 768px) {
+    flex-direction: column;
+  }
 
 `
 

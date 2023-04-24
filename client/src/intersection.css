@@ -41,10 +41,13 @@
     transform: translateX(0);
 }
 
-.react-icon {
-    transition: color 0.3s;
-  }
-  
-  .react-icon:hover {
-    color: black;
-  }
+.responsive-icon {
+    font-size: 100px;
+}
+
+@media (max-width: 767px) {
+    .responsive-icon {
+      /* Styles for mobile devices */
+      font-size: 40px;
+    }
+}
