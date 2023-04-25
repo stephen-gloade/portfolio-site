@@ -9,11 +9,12 @@ import { IconContext } from "react-icons/lib";
 import { Link } from "react-scroll"
 import RightSideBar from "./RightSideBar";
 import { textColor } from "./GlobalStyles";
+import CustomContent from "./CustomContent";
 
 const Home = () => {
 
     const [showPasteString, setShowPasteString] = useState(false);
-    const [ showButton, setShowButton ] =useState(false)
+    const [ showButton, setShowButton ] = useState(false)
 
 
     const handleClick = () => {
@@ -38,10 +39,10 @@ const Home = () => {
                 <TypeWrap>
                 <Typewriter 
                 onInit={(typewriter) => {
-                    typewriter.typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';">console.log("Hello World! 👋");</h1>`)
+                    typewriter.typeString(`<h1 class="typewriter-h1">console.log("Hello World! 👋");</h1>`)
                     .pauseFor(500)
                     .deleteChars(19)
-                    .typeString(`<h1 style="display: inline; font-family: 'Fira Code Light';"><span style="font-family: 'Fira Code Bold';">stephen</span>);</h1>`)
+                    .typeString(`<h1 class="typewriter-h1"><span class="typewriter-bold">stephen</span>);</h1>`)
                     .pauseFor(200)
                     .typeString('<h1 style="opacity: 0;">|</h1>')
                     .pauseFor(200)
@@ -68,23 +69,7 @@ const Home = () => {
                     </div>
                 )}
                 {showPasteString && (
-                    <div style={{borderRadius: '25px', margin: '10px', padding: '5px',}}><h1 style={{fontFamily: 'Fira Code Light'}}>
-                        <span style={{color: '#576CBC'}}>&#123;</span>
-                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>firstName:</span> <span style={{color: '#A4BE7B'}}>"Stephen"</span>,
-                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>lastName:</span> <span style={{color: '#A4BE7B'}}>"Gloade"</span>,
-                        <br/><span style={{marginLeft: '30px', color: '#05BFDB'}}>status:</span> <span style={{color: '#A4BE7B'}}>418</span>,
-                        <br/><StyledLink to="section1" smooth={true} duration={500}>
-                        <IconContext.Provider value={{ size: '30px', marginLeft: '30px'}}>
-                        <IoMdArrowDroprightCircle/>
-                        </IconContext.Provider>
-                        </StyledLink><span style={{color: '#05BFDB'}}>about:</span> [<span style={{color: '#A4BE7B'}}>"Full-Stack Web Developer"</span>],
-                        <br/><Link to="section2" smooth={true} duration={500}>
-                        <IconContext.Provider value={{ size: '30px', marginLeft: '30px'}}>
-                        <IoMdArrowDroprightCircle/>
-                        </IconContext.Provider>
-                        </Link><span style={{color: '#05BFDB'}}>technologies:</span> [<span style={{color: '#A4BE7B'}}>"Node.js", "React", "React Native"</span>],
-                        <br/><span style={{color: '#576CBC'}}>&#125;</span>
-                    </h1></div>
+                    <CustomContent/>
                 )}
                 </TypeWrap>
                 <StickyScroll/>
@@ -96,9 +81,6 @@ const Home = () => {
     )
 }
 
-const StyledLink = styled(Link)`
-cursor: pointer;
-`
 
 const TypeWrap = styled.div`
 height: calc(100vh - 150px);

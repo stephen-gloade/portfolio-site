@@ -157,6 +157,10 @@ justify-content: center;
 width: 50%;
 height: 100%;
 padding: 30px;
+@media (max-width: 767px) {
+    width: 80%;
+    height: 80%;
+  }
 `
 
 const H1 = styled.h1 `
@@ -309,6 +313,7 @@ border-top: 1px solid ${textColor};
 
 @media (max-width: 768px) {
     flex-direction: column;
+    justify-content: center;
   }
 
 `

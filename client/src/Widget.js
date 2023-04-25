@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import './widget.css'
 import gridImage from "./grid.jpeg";
+import { textColor } from "./GlobalStyles";
 
 const Widget = () => {
 
@@ -23,6 +24,7 @@ const Widget = () => {
                             <Li>Developed a website for a sports advising company I co-founded using React, Node.js and MongoDB</Li>
                             <Li>Implemented many technologies such as Twilio, Stripe, Paypal, Sendgrid, and Auth0 to create a seamless customer experience</Li>
                             <Li>Became a project lead upon hiring two software developers to assist with future iterations</Li>
+                            <Li>Working on an app version via React Native</Li>
                         </Ul>
                         <P>The project is still in the works!</P>
                         <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a>
@@ -166,30 +168,33 @@ justify-content: space-between;
 `
 
 const HeaderItem = styled.li`
-  text-align: center;
-  margin: 10px 20px;
-  position: relative;
-  transition: border-bottom 0.3s ease-in-out;
-  font-size: 2rem;
-  cursor: pointer;
+text-align: center;
+margin: 10px 20px;
+position: relative;
+transition: border-bottom 0.3s ease-in-out;
+font-size: 2rem;
+cursor: pointer;
 
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #333;
-    transition: width 0.3s ease-in-out;
-  }
+border-bottom: 1px solid ${textColor};
 
-  &:hover:before {
-    width: 100%;
-  }
+&:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s ease-in-out;
+}
+
+&:hover:before {
+  width: 100%;
+}
 `;
 
 const ActiveHeaderItem = styled(HeaderItem)`
+
 &:before {
 width: 100%;
 }
