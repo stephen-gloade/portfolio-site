@@ -183,6 +183,7 @@ const NavItem = styled.li`
   list-style-type: none;
   margin: 30px;
   font-family: "Fira Code";
+  cursor: pointer;
 `;
 
 const NavWrap = styled.nav`
