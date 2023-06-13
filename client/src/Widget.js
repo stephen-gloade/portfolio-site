@@ -39,6 +39,10 @@ const Widget = () => {
                     <Li>Learned how to develop web apps using JavaScript, React, Node.js, and MongoDB</Li>
                     <Li>Learned how to self teach concepts and learn new technologies at a rapid pace</Li>
                 </Ul>
+                <ConcordiaProjectDiv>
+                  <Project target='_blank' href="https://github.com/stephen-gloade/dubs-advising">Capstone Project</Project>
+                  <Project target='_blank' href="https://github.com/stephen-gloade/ecommerce-project">Ecommerce Website</Project>
+                </ConcordiaProjectDiv>
                 {/* <P>The project is still in the works!</P>
                 <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a> */}
             </DescriptionWrap>
@@ -64,9 +68,9 @@ const Widget = () => {
                 <StyledUl>
                     <Button onClick={() => handleClick("dubs")}>
                     {activeTab === "dubs" ? (
-                        <ActiveHeaderItem>Dubs</ActiveHeaderItem>
+                        <ActiveHeaderItem>Work</ActiveHeaderItem>
                         ) : (
-                        <HeaderItem>Dubs</HeaderItem>
+                        <HeaderItem>Work</HeaderItem>
                         )}
                     </Button>
                     <Button onClick={() => handleClick("bootcamp")}>
@@ -92,6 +96,19 @@ const Widget = () => {
 
 const Span = styled.span `
 
+`
+const ConcordiaProjectDiv = styled.div`
+display: flex;
+width: 100%;
+justify-content: center;
+
+`
+
+const Project = styled.a`
+margin: 10px;
+padding: 20px;
+text-decoration: none;
+border: 1px solid ${textColor};
 `
 
 const Ul = styled.ul`

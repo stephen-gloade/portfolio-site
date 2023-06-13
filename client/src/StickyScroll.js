@@ -205,6 +205,7 @@ const P = styled.p`
 const AboutInfo = styled.div`
 display: flex;
 flex-direction: column;
+margin: 20px;
 `
 
 const Img = styled.img`
