@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <HeaderWrap>
-      <Img src={require("./greenColorLogo.png")} alt="Personal Logo" />
+      <Img src={require("./images/greenColorLogo.png")} alt="Personal Logo" />
       {isMobile ? (
         <>
           <HamburgerIcon onClick={toggleNav} className={isNavOpen ? "cross" : ""}>

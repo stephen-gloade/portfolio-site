@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
-import './widget.css'
-import gridImage from "./grid.jpeg";
+import './css/widget.css'
+import gridImage from "./images/grid.jpeg";
 import { textColor } from "./GlobalStyles";
 
 const Widget = () => {
@@ -21,7 +21,7 @@ const Widget = () => {
                     <DescriptionWrap>
                         <H1>Dubs Advising</H1>
                         <Ul>
-                            <Li>Developed a website for a sports advising company I co-founded using React, Node.js and MongoDB</Li>
+                            <Li>Developed a website for a sports advising company I co-founded using React, Django and PostgreSQL</Li>
                             <Li>Implemented many technologies such as Twilio, Stripe, Paypal, Sendgrid, and Auth0 to create a seamless customer experience</Li>
                             <Li>Became a project lead upon hiring two software developers to assist with future iterations</Li>
                             <Li>Working on an app version via React Native</Li>
@@ -156,6 +156,7 @@ height: 100%;
 width: 100%;
 display: flex;
 flex-direction: column;
+
 `
 
 const ContentWrap = styled.div`
@@ -229,6 +230,10 @@ flex-direction: column;
 align-items: center;
 height: 100%;
 width: 100%;
+@media (max-width: 767px) {
+  width: 90%;
+  margin: 0px 10px;
+}
 
 `
 

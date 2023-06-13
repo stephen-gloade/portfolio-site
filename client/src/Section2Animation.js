@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import horizontalmonitor from './horizontalMonitor.png'
+import horizontalmonitor from './images/horizontalMonitor.png'
 import Section2Typewriter from "./Section2Typewriter"
 import { useInView } from "react-intersection-observer"
-import verticalmonitor from './verticalMonitor.png'
+import verticalmonitor from './images/verticalMonitor.png'
 
 
 
@@ -15,12 +15,12 @@ const Section2Animation = () => {
     return (
         <Section2AnimationWrap>
             <DeskWrap>
-                <VerticalMonitorImg src={require('./verticalMonitor.png')} ref={myRef} className={`fade-in-vertical ${inView ? 'is-visible-vertical' : ''}`}/>
+                <VerticalMonitorImg src={require('./images/verticalMonitor.png')} ref={myRef} className={`fade-in-vertical ${inView ? 'is-visible-vertical' : ''}`}/>
             <MonitorDiv ref={myRef} className={`fade-in ${inView ? 'is-visible' : ''}`}>
                 <Section2Typewriter/>
             </MonitorDiv>
-            <NotificationsImg src={require('./notifications.png')} ref={deskRef} className={`fade-in-desk ${inViewDesk ? 'is-visible-desk' : ''}`}/>
-            <DeskImg src={require('./sittingDesk.png')} ref={deskRef} className={`fade-in-desk ${inViewDesk ? 'is-visible-desk' : ''}`}/>
+            <NotificationsImg src={require('./images/notifications.png')} ref={deskRef} className={`fade-in-desk ${inViewDesk ? 'is-visible-desk' : ''}`}/>
+            <DeskImg src={require('./images/sittingDesk.png')} ref={deskRef} className={`fade-in-desk ${inViewDesk ? 'is-visible-desk' : ''}`}/>
             </DeskWrap>
         </Section2AnimationWrap>
     )

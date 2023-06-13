@@ -4,9 +4,9 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
 import styled from "styled-components";
 import { textColor, primaryColor } from "./GlobalStyles";
-import gridImage from './grid.jpeg';
-import { useInView } from 'react-intersection-observer';
-import './intersection.css'
+import gridImage from './images/grid.jpeg';
+
+import './css/intersection.css'
 import Section2Animation from "./Section2Animation";
 import Section2Content from "./Section2Content";
 import { GrLocation } from "react-icons/gr";
@@ -24,7 +24,7 @@ const StickyScroll = () => {
       content: (
         <SectionDiv1 className="section1">
           <ContentWrap>
-            <Img src={require('./avatar2.jpg')}/>
+            <Img src={require('./images/avatar2.jpg')}/>
             <AboutInfo>
               <H2>About</H2>
               <P>My name is Stephen Gloade, a First Nations Canadian who loves working with teams, and pursuing ambitious dreams. 
