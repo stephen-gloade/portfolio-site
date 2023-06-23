@@ -11,7 +11,6 @@ const Widget = () => {
 
     const handleClick = (tab) => {
       setActiveTab(tab);
-      console.log("Switching to tab:", tab);
     };
   
     const renderContent = () => {
@@ -21,13 +20,13 @@ const Widget = () => {
                     <DescriptionWrap>
                         <H1>Dubs Advising</H1>
                         <Ul>
-                            <Li>Developed a website for a sports advising company I co-founded using React, Django and PostgreSQL</Li>
-                            <Li>Implemented many technologies such as Twilio, Stripe, Paypal, Sendgrid, and Auth0 to create a seamless customer experience</Li>
+                            <Li>Developed a website for a sports advising company I co-founded using React, Flask and PostgreSQL</Li>
+                            <Li>Implemented many technologies such as Twilio, Stripe, and Paypal to create a seamless customer experience</Li>
                             <Li>Became a project lead upon hiring two software developers to assist with future iterations</Li>
-                            <Li>Working on an app version via React Native</Li>
+                            <Li>Working on an app version via FlutterFlow</Li>
                         </Ul>
                         <P>The project is still in the works!</P>
-                        <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a>
+                        <a target="blank" href="https://dubs-frontend.web.app/">Current W.I.P deployment!</a>
                     </DescriptionWrap>
                 </ItemContentWrap>);
         case "bootcamp":
@@ -94,9 +93,6 @@ const Widget = () => {
     )
 }
 
-const Span = styled.span `
-
-`
 const ConcordiaProjectDiv = styled.div`
 display: flex;
 width: 100%;
