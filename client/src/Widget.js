@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import './css/widget.css'
+import './styles/widget.css'
 import gridImage from "./images/grid.jpeg";
 import { textColor } from "./GlobalStyles";
 
@@ -126,16 +126,6 @@ margin: 10px;
 const H1 = styled.h1`
 font-family: 'Fira Code Light';
 margin: 10px;
-`
-const P = styled.p `
-
-`
-
-const ImgWrap = styled.div`
-display: flex;
-justify-content: center;
-height: 30%;
-width: 100%;
 `
 
 const DescriptionWrap = styled.div `

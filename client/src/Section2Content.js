@@ -12,7 +12,7 @@ const Section2Content = () => {
 const Section2ContentWrap = styled.div`
 height: 100%;
 width: 100%;
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   display: flex;
   justify-content: center;
 }

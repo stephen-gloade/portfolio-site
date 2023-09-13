@@ -31,8 +31,20 @@ const GlobalStyles = createGlobalStyle `
     ul,
     a {
         color: ${textColor};
-        font-family: 'Fira Code'
+        font-family: 'Fira Code';
+    
     }
+
+    p,
+    li,
+    ul,
+    a {
+        @media (max-width: 580px) {
+            font-size: 0.8rem;
+        }
+    }
+
+
 
     ::-webkit-scrollbar {
         width: 0px;

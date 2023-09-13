@@ -5,8 +5,7 @@ import { Tween } from "react-gsap";
 import styled from "styled-components";
 import { textColor, primaryColor } from "./GlobalStyles";
 import gridImage from './images/grid.jpeg';
-
-import './css/intersection.css'
+import './styles/intersection.css'
 import Section2Animation from "./Section2Animation";
 import Section2Content from "./Section2Content";
 import { GrLocation } from "react-icons/gr";
@@ -24,10 +23,10 @@ const StickyScroll = () => {
       content: (
         <SectionDiv1 className="section1">
           <ContentWrap>
-            <Img src={require('./images/avatar2.jpg')}/>
+            <Img className="w-50 h-50 img-fluid mx-auto"src={require('./images/avatar2.jpg')}/>
             <AboutInfo>
               <H2>About</H2>
-              <P>My name is Stephen Gloade, a First Nations Canadian who loves working with teams, and pursuing ambitious dreams. 
+              <P className="">My name is Stephen Gloade, a First Nations Canadian who loves working with teams, and pursuing ambitious dreams. 
                 I am a Full-Stack web developer currently looking for work.
                 I have a passion for design and enjoy making clean looking projects with a focus on usability.
                 As a recent Concordia bootcamp graduate I found an immense passion for learning new technologies and diving
@@ -199,7 +198,9 @@ border-bottom: 1px solid ${textColor};
 
 `
 const P = styled.p`
-
+@media (max-width: 580px) {
+  font-size: 0.8rem;
+}
 `
 
 const AboutInfo = styled.div`

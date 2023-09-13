@@ -2,7 +2,7 @@ import { useState } from "react";
 import SideBar from "./SideBar"
 import styled from "styled-components"
 import Typewriter from 'typewriter-effect';
-import './css/home.css'
+import './styles/home.css'
 import StickyScroll from "./StickyScroll";
 import { IoMdArrowDroprightCircle } from 'react-icons/io'
 import { IconContext } from "react-icons/lib";

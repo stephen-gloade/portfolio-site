@@ -8,12 +8,7 @@ const Section2Typewriter = () => {
             const Header = () => {
                 </br>const [ show, setShow ] = useState(false);
                 </br>ref={myRef} className={'fade-in'}
-                </br>return (
-                    </br>
-                    )
-            };
-            </br> export default Header;
-            </p>`)
+                </br>return `)
             // .pauseFor(500)
             // .typeString(`<p style="display: inline; font-family: 'Fira Code Light'; font-size: 5px;"><span style="font-family: 'Fira Code Bold'; font-size: 5px;">stephen</span>);</p>`)
             // .pauseFor(200)
