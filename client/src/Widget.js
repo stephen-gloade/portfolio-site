@@ -23,10 +23,11 @@ const Widget = () => {
                             <Li>Developed a website for a sports advising company I co-founded using React, Flask and PostgreSQL</Li>
                             <Li>Implemented many technologies such as Twilio, Stripe, and Paypal to create a seamless customer experience</Li>
                             <Li>Became a project lead upon hiring two software developers to assist with future iterations</Li>
-                            <Li>Working on an app version via FlutterFlow</Li>
+                            <ConcordiaProjectDiv>
+                            <Project target='_blank' href="https://dubsadvising.com/">Dubs Advising</Project>
+                            </ConcordiaProjectDiv>
                         </Ul>
-                        <P>The project is still in the works!</P>
-                        <a target="blank" href="https://dubs-frontend.web.app/">Current W.I.P deployment!</a>
+                        
                     </DescriptionWrap>
                 </ItemContentWrap>);
         case "bootcamp":
@@ -47,15 +48,15 @@ const Widget = () => {
             </DescriptionWrap>
         </ItemContentWrap>);
         case "wip":
-          return (<ItemContentWrap>
-            <DescriptionWrap>
-                <H1>Open Source Software</H1>
-                <Ul>
-                    <Li>While making my projects I learned the importance of open source software and am beyond excited to start contributing</Li>
-                    <Li>As I start my journey into OSS contributions I will be updating this portfolio</Li>
-                </Ul>
-            </DescriptionWrap>
-        </ItemContentWrap>);
+        //   return (<ItemContentWrap>
+        //     <DescriptionWrap>
+        //         <H1>Open Source Software</H1>
+        //         <Ul>
+        //             <Li>While making my projects I learned the importance of open source software and am beyond excited to start contributing</Li>
+        //             <Li>As I start my journey into OSS contributions I will be updating this portfolio</Li>
+        //         </Ul>
+        //     </DescriptionWrap>
+        // </ItemContentWrap>);
         default:
           return <p>No content available</p>;
       }
@@ -79,13 +80,13 @@ const Widget = () => {
                         <HeaderItem>Bootcamp</HeaderItem>
                         )}
                     </Button>
-                    <Button onClick={() => handleClick("wip")}>
+                    {/* <Button onClick={() => handleClick("wip")}>
                         {activeTab === "wip" ? (
                         <ActiveHeaderItem>OSS</ActiveHeaderItem>
                         ) : (
                         <HeaderItem>OSS</HeaderItem>
                         )}
-                    </Button>
+                    </Button> */}
                 </StyledUl>
             </HeaderWrap>
             <ContentWrap>{renderContent()}</ContentWrap>
@@ -105,6 +106,12 @@ margin: 10px;
 padding: 20px;
 text-decoration: none;
 border: 1px solid ${textColor};
+transition: all 0.5s ease-out;
+
+&:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
 `
 
 const Ul = styled.ul`
@@ -135,10 +142,6 @@ const DescriptionWrap = styled.div `
 display: flex;
 flex-direction: column;
 width: 100%;
-/* background-image: url(${gridImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 `
 
 const Img = styled.img`
@@ -160,8 +163,8 @@ const ContentWrap = styled.div`
   height: 100%;
   text-align: center;
   margin-top: 10px;
-  border: 1px solid black;
-  border-radius: 25px;
+  border-bottom: 1px solid black;
+
 `;
 
 const Button = styled.button`
@@ -177,7 +180,7 @@ const StyledUl = styled.ul `
 list-style-type: none;
 display: flex;
 width: 100%;
-justify-content: space-between;
+justify-content: space-evenly;
 
 `
 
