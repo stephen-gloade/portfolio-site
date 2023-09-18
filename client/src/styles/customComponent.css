@@ -1,5 +1,6 @@
 /* CustomComponent.css */
 
+
 .custom-container {
     border-radius: 25px;
     margin: 10px;
@@ -8,6 +9,7 @@
   
   .custom-h1 {
     font-family: 'Fira Code Light';
+    font-weight: 700;
   }
   
   .custom-key {

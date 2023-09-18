@@ -42,7 +42,7 @@ const CustomContent = () => {
         </Link>
         <span className="custom-key-no-margin">experience:</span>{' '}
         <span className="custom-value">
-          ["Node.js", "React", "React Native"],
+          ["JavaScript", "React", "Node.js", "CSS", "TypeScript", "Python"],
         </span>
         <br />
         <span className="custom-bracket">&#125;</span>

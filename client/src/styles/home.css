@@ -32,6 +32,7 @@
   @media (max-width: 768px) {
     .typewriter-h1 {
       font-size: 16px;
+      font-weight: 700;
     }
 
     .typewriter-bold {
@@ -42,6 +43,7 @@
   @media (min-width: 769px) {
     .typewriter-h1 {
       font-size: 32px;
+      font-weight: 700;
     }
 
     .typewriter-bold {
