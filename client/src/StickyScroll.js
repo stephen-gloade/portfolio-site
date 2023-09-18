@@ -73,12 +73,12 @@ const StickyScroll = () => {
           </SkillsWrap>
           <CardWrap>
           <Card class="card">
-          <p>
+          <PStephen>
             Stephen Gloade
-          </p>
-          <h2>
+          </PStephen>
+          <ContactMe>
             Contact Me.
-          </h2>
+          </ContactMe>
           <GridDiv>
           <IconContext.Provider value={{ className: 'responsive-icon', }}>
             <GridItem><a  target="_blank" href="https://github.com/stephen-gloade"><FaGithubAlt/></a></GridItem>
@@ -94,7 +94,6 @@ const StickyScroll = () => {
         </SectionDiv3>
       ),
     },
-    // Add more sections if needed
   ];
 
   return (
@@ -116,11 +115,17 @@ const StickyScroll = () => {
   );
 };
 
+const PStephen = styled.p`
+margin:0px;
+`
+
+const ContactMe = styled.h2`
+margin:0px;
+`
 
 const GridItem = styled.div`
   width: 100%;
   height: 100%;
-  /* border: 1px solid rgba(0, 0, 0, 0.1); // Optional, to visualize grid items */
   background-color: ${primaryColor};
   display: flex; 
   align-items: center; 
@@ -140,10 +145,9 @@ const GridItem = styled.div`
 
 const GridDiv = styled.div `
 display: grid;
-/* gap: 5px; */
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr;
-width: 100%;
+width: 90%;
 height: 80%;
 
 
@@ -164,6 +168,7 @@ padding: 30px;
 
 const H1 = styled.h1 `
 font-size: 40px;
+margin-top: 15px;
 `
 
 const H1Bot = styled.h1 `

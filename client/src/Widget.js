@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
 import './styles/widget.css'
-import gridImage from "./images/grid.jpeg";
 import { textColor } from "./GlobalStyles";
 
 const Widget = () => {
@@ -43,20 +42,9 @@ const Widget = () => {
                   <Project target='_blank' href="https://github.com/stephen-gloade/dubs-advising">Capstone Project</Project>
                   <Project target='_blank' href="https://github.com/stephen-gloade/ecommerce-project">Ecommerce Website</Project>
                 </ConcordiaProjectDiv>
-                {/* <P>The project is still in the works!</P>
-                <a target="blank" href="https://github.com/stephen-gloade/dubs-advising">Github project repo</a> */}
             </DescriptionWrap>
         </ItemContentWrap>);
         case "wip":
-        //   return (<ItemContentWrap>
-        //     <DescriptionWrap>
-        //         <H1>Open Source Software</H1>
-        //         <Ul>
-        //             <Li>While making my projects I learned the importance of open source software and am beyond excited to start contributing</Li>
-        //             <Li>As I start my journey into OSS contributions I will be updating this portfolio</Li>
-        //         </Ul>
-        //     </DescriptionWrap>
-        // </ItemContentWrap>);
         default:
           return <p>No content available</p>;
       }
@@ -80,13 +68,6 @@ const Widget = () => {
                         <HeaderItem>Bootcamp</HeaderItem>
                         )}
                     </Button>
-                    {/* <Button onClick={() => handleClick("wip")}>
-                        {activeTab === "wip" ? (
-                        <ActiveHeaderItem>OSS</ActiveHeaderItem>
-                        ) : (
-                        <HeaderItem>OSS</HeaderItem>
-                        )}
-                    </Button> */}
                 </StyledUl>
             </HeaderWrap>
             <ContentWrap>{renderContent()}</ContentWrap>
@@ -134,12 +115,6 @@ flex-direction: column;
 width: 100%;
 `
 
-const Img = styled.img`
-height: 100%;
-width: 30%;
-
-`
-
 const ItemContentWrap = styled.div `
 height: 100%;
 width: 100%;
@@ -171,6 +146,7 @@ list-style-type: none;
 display: flex;
 width: 100%;
 justify-content: space-evenly;
+padding-left: 0px;
 
 `
 
@@ -181,6 +157,7 @@ position: relative;
 transition: border-bottom 0.3s ease-in-out;
 font-size: 2rem;
 cursor: pointer;
+
 
 border-bottom: 1px solid ${textColor};
 
@@ -198,6 +175,7 @@ border-bottom: 1px solid ${textColor};
 &:hover:before {
   width: 100%;
 }
+
 `;
 
 const ActiveHeaderItem = styled(HeaderItem)`

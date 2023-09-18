@@ -30,6 +30,8 @@ const H1 = styled.h1`
 transform: rotate(90deg);
 margin: 0px;
 padding: 0px;
+font-size:32px;
+font-weight: 700;
 `
 
 const RightSideBarWrap = styled.div`

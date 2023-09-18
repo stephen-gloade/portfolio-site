@@ -42,6 +42,7 @@ border-right: 1px solid ${textColor};
 const Navul = styled.ul`
 display: flex;
 flex-direction: column;
+padding-left:0px;
 
 `
 
