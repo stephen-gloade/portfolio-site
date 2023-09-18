@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "./SideBar"
 import styled from "styled-components"
 import Typewriter from 'typewriter-effect';
@@ -30,6 +30,7 @@ const Home = () => {
         transform: 'rotate(90deg)',
     };
 
+
     return (
         <PageWrap>
             <SideBarWrapper>
@@ -39,7 +40,11 @@ const Home = () => {
                 <TypeWrap>
                 <Typewriter 
                 onInit={(typewriter) => {
-                    typewriter.typeString(`<h1 class="typewriter-h1">console.log("Hello World! 👋");</h1>`)
+
+                    // setTypewriterInstance(typewriter);
+
+                    typewriter
+                    .typeString(`<h1 class="typewriter-h1">console.log("Hello World! 👋");</h1>`)
                     .pauseFor(500)
                     .deleteChars(19)
                     .typeString(`<h1 class="typewriter-h1"><span class="typewriter-bold">stephen</span>);</h1>`)
