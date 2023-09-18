@@ -81,11 +81,11 @@ const StickyScroll = () => {
           </ContactMe>
           <GridDiv>
           <IconContext.Provider value={{ className: 'responsive-icon', }}>
-            <GridItem><a  target="_blank" href="https://github.com/stephen-gloade"><FaGithubAlt/></a></GridItem>
+            <GridItem><a  target="_blank" rel="noreferrer" href="https://github.com/stephen-gloade"><FaGithubAlt/></a></GridItem>
             <GridItem></GridItem>
-            <GridItem><a target="_blank" href="https://www.linkedin.com/in/stephen-gloade-8751bbb5/"><FaLinkedin/></a></GridItem>
+            <GridItem><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/stephen-gloade-8751bbb5/"><FaLinkedin/></a></GridItem>
             <GridItem></GridItem>
-            <GridItem><a target="_blank" href="https://www.instagram.com/stephen.gloade/"><FaInstagram/></a></GridItem>
+            <GridItem><a target="_blank"rel="noreferrer" href="https://www.instagram.com/stephen.gloade/"><FaInstagram/></a></GridItem>
             <GridItem></GridItem>
           </IconContext.Provider>
           </GridDiv>
@@ -175,14 +175,6 @@ const H1Bot = styled.h1 `
 font-size: 40px;
 border-bottom: 1px solid ${textColor};
 width: fit-content;
-`
-
-const Skills = styled.div `
-display: flex;
-flex-direction: column;
-width: 30%;
-border: 1px solid red;
-height: 100%;
 `
 
 const SkillsWrap = styled.div `

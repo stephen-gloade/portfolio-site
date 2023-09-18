@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { textColor } from "./GlobalStyles"
 const RightSideBar = () => {
     return (
         <RightSideBarWrap>
@@ -20,11 +19,6 @@ const RightSideBar = () => {
         </RightSideBarWrap>
     )
 }
-const BorderLeft = styled.div`
-height: 150px;
-border-left: 1px solid ${textColor};
-/* border-bottom: 3px dashed #fff; */
-`
 
 const H1 = styled.h1`
 transform: rotate(90deg);

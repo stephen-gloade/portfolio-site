@@ -33,16 +33,28 @@ const CustomContent = () => {
           ["Full-Stack Web Developer"],
         </span>
         <br />
-        <Link to="section2" smooth={true} duration={500}>
+        <StyledLink to="section2" smooth={true} duration={500}>
           <IconContext.Provider
             value={{ className: 'arrow-icon' }}
           >
             <IoMdArrowDroprightCircle />
           </IconContext.Provider>
-        </Link>
+        </StyledLink>
         <span className="custom-key-no-margin">experience:</span>{' '}
         <span className="custom-value">
           ["JavaScript", "React", "Node.js", "CSS", "TypeScript", "Python"],
+        </span>
+        <br />
+        <StyledLink to="section3" smooth={true} duration={500}>
+          <IconContext.Provider
+            value={{ className: 'arrow-icon' }}
+          >
+            <IoMdArrowDroprightCircle />
+          </IconContext.Provider>
+        </StyledLink>
+        <span className="custom-key-no-margin">contact:</span>{' '}
+        <span className="custom-value">
+          "Lets connect!",
         </span>
         <br />
         <span className="custom-bracket">&#125;</span>

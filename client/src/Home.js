@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SideBar from "./SideBar"
 import styled from "styled-components"
 import Typewriter from 'typewriter-effect';
@@ -6,7 +6,6 @@ import './styles/home.css'
 import StickyScroll from "./StickyScroll";
 import { IoMdArrowDroprightCircle } from 'react-icons/io'
 import { IconContext } from "react-icons/lib";
-import { Link } from "react-scroll"
 import RightSideBar from "./RightSideBar";
 import { textColor } from "./GlobalStyles";
 import CustomContent from "./CustomContent";
@@ -119,12 +118,7 @@ justify-content:center;
 
 @media (max-width: 768px) {
     display: none;
-  }
-`
-
-const P  = styled.p `
-font-size: 50px;
-
+}
 `
 
 const MainWrap = styled.div`
